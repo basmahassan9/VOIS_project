@@ -43,6 +43,29 @@ public class registerPage {
     public void addressAdd(String address){
         driver.findElement(By.id("address1")).sendKeys(address);
     }
+    public void cityAdd(String city){
+        driver.findElement(By.id("city")).sendKeys(city);
+    }
+    public void stateAdd(String state){
+        Select stateObj= new Select(driver.findElement(By.id("id_state")));
+        stateObj.selectByVisibleText(state);
 
+    }
+    public void postcodeAdd(String postcode){
+        driver.findElement(By.id("postcode")).sendKeys(postcode);
+    }
+    public void countryAdd(String country){
+        Select countryObj= new Select(driver.findElement(By.id("id_country")));
+        countryObj.selectByVisibleText(country);
+    }
 
+    public void phoneAdd(String phone){
+        driver.findElement(By.id("phone")).sendKeys(phone);
+    }
+    public void mobileAdd(String mobile){
+        driver.findElement(By.id("phone_mobile")).sendKeys(mobile);
+    }
+    public void submitBtn(){
+        driver.findElement(By.id("submitAccount")).click();
+    }
 }

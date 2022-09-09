@@ -16,4 +16,14 @@ public class loginPage {
         return new registerPage(driver);
     }
 
+    public void addEmail(String mail){
+        driver.findElement(By.id("email")).sendKeys(mail);
+    }
+    public void addPass(String pass){
+        driver.findElement(By.id("passwd")).sendKeys(pass);
+    }
+    public void signinBtn(){
+        driver.findElement(By.id("SubmitLogin")).click();
+    }
+
 }
