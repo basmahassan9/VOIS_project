@@ -15,8 +15,11 @@ public class homePage {
         driver.findElement(By.className("login")).click();
         return new loginPage(driver);
    }
+   public WebElement getUserBtn(){
+       return driver.findElement(By.xpath("//div[@class=\"header_user_info\"]//span"));
+   }
    public String getName(){
-        return driver.findElement(By.xpath("//div[@class=\"header_user_info\"]//span")).getText();
+        return getUserBtn().getText();
    }
    public blousesPage blouseBtnClick(){
        Actions action = new Actions(driver);
@@ -24,5 +27,13 @@ public class homePage {
        driver.findElement(By.xpath("//a[@title=\"Blouses\"]")).click();
        return new blousesPage(driver);
    }
+   public myAccountPage userBtnClick(){
+        getUserBtn().click();
+        return new myAccountPage(driver);
+   }
+    public WebElement logoutBtn(){
+        return driver.findElement(By.className("logout"));
+    }
+
 
 }

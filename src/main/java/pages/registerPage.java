@@ -68,4 +68,7 @@ public class registerPage {
     public void submitBtn(){
         driver.findElement(By.id("submitAccount")).click();
     }
+    public String getErrorMsg(){
+        return driver.findElement(By.cssSelector("div.alert.alert-danger li")).getText();
+    }
 }

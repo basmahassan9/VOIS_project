@@ -25,5 +25,10 @@ public class loginPage {
     public void signinBtn(){
         driver.findElement(By.id("SubmitLogin")).click();
     }
-
+    public String getInvalidMailMsg(){
+        return driver.findElement(By.cssSelector("div#create_account_error li")).getText();
+    }
+    public String getErrorMsg(){
+        return driver.findElement(By.cssSelector("div.alert.alert-danger li")).getText();
+    }
 }

@@ -19,7 +19,7 @@ public class baseTest {
         driver = new ChromeDriver();
         goHome();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         home = new homePage(driver);
 
     }
